@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Create New Note{% endblock %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <span>{{ error }}</span>
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Diary{% endblock %}
+
+{% block content %}
+
+    {{ view_note.title }}<br>
+    {{ view_note.date }}<br>
+    {{ view_note.body }}<br><br>
+    <a href="{% url 'update_note' view_note.id %}">Update</a>
+    <a href="{% url 'delete_note' view_note.id %}">Delete</a>
+
+{% endblock %}

@@ -3,5 +3,8 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (diary_of_notes)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (diary_of_notes)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (5_Month_8_Day_MyProject)" project-jdk-type="Python SDK" />
+  <component name="PyCharmProfessionalAdvertiser">
+    <option name="shown" value="true" />
+  </component>
 </project>

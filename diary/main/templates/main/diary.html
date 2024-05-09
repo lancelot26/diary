@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ note.title }}{% endblock %}
+
+{% block content %}
+
+{% for note in notes %}
+
+    <a href="{% url 'view_note' note.id %}">
+        {{ note.title }}<br>
+        {{ note.date }}<br>
+        {{ note.body }}<br><br>
+    </a>
+
+{% endfor %}
+
+{% endblock %}

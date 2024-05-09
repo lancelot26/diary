@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
+<nav>
+    <a href="/">Diary</a> |
+    <a href="/create">Create New Post</a>
+</nav>
+<br>
+{% block content %}{% endblock %}
 </body>
 </html>
