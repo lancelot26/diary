@@ -5,11 +5,12 @@
 {% block content %}
 
 {% for note in notes %}
-    <a href="{% url 'view_note' note.id %}">
+
         {{ note.title }}<br>
         {{ note.date }}<br>
-        {{ note.body }}<br><br>
-    </a>
+        {{ note.body }}<br>
+        {{ note.author }}<br><br>
+
 {% endfor %}
 
 {% endblock %}

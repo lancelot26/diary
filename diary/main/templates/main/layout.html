@@ -7,8 +7,21 @@
 <body>
 
 <nav>
+
+    <a href="/forum">Forum</a> |
+
+{% if user.is_authenticated %}
     <a href="/">Diary</a> |
-    <a href="/create">Create New Post</a>
+    <a href="/create">New Note</a> |
+    <form action="{% url 'users:logout' %}" method="post">
+        {% csrf_token %}
+        <button>Logout</button>
+    </form>
+{% else %}
+    <a href="{% url 'users:login' %}">Login</a> |
+    <a href="{% url 'users:register' %}">Registration</a>
+{% endif %}
+
 </nav>
 <br>
 {% block content %}{% endblock %}
