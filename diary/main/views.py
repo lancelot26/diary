@@ -5,13 +5,13 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
 
 def forum(request):
-    notes = Note.objects.all()
+    notes = Note.objects.order_by('-date')
     return render(request, 'main/forum.html', {'notes':notes})
 
 @login_required(login_url='/users/login/')
 def diary(request):
-    notes = Note.objects.all()
-    return render(request, 'main/diary.html', {'notes':notes})
+    notes = Note.objects.filter(author = request.user)
+    return render(request, 'main/diary.html', {'notes': notes})
 
 @login_required(login_url='/users/login/')
 def create_note(request):
@@ -40,7 +40,7 @@ class ViewNote(DeleteView):
 
 class UpdateNote(UpdateView):
     model = Note
-    template_name = 'main/create_post.html'
+    template_name = 'main/update_post.html'
     form_class = NoteForm
 
 

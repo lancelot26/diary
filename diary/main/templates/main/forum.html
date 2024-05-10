@@ -1,15 +1,14 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Your Diary{% endblock %}
+{% block title %}Forum{% endblock %}
 
 {% block content %}
-
+<h2>Forum</h2>
 {% for note in notes %}
-
-        {{ note.title }}<br>
+        User: {{ note.author }}<br>
         {{ note.date }}<br>
-        {{ note.body }}<br>
-        {{ note.author }}<br><br>
+        {{ note.title }}<br>
+        {{ note.body }}<br><br>
 
 {% endfor %}
 

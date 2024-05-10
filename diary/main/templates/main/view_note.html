@@ -9,5 +9,6 @@
     {{ view_note.body }}<br><br>
     <a href="{% url 'update_note' view_note.id %}">Update</a>
     <a href="{% url 'delete_note' view_note.id %}">Delete</a>
+    <a href="/">Return to diary</a>
 
 {% endblock %}

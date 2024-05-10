@@ -3,10 +3,13 @@
 {% block title %}Create New Note{% endblock %}
 
 {% block content %}
-<h2>Do you really want to delete this note?</h2>
+<h2>Update your note</h2>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Delete</button>
+        {{ form }}
+        <span>{{ error }}</span>
+        <button type="submit">Submit</button>
     </form>
     <a href="{% url 'view_note' note.id %}">Cancel</a>
+
 {% endblock %}
